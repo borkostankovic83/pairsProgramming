@@ -1,7 +1,10 @@
-package com.revature.cognizant.aggregatedService.model;
+package com.revature.cognizant.model;
 
 import java.sql.Timestamp;
 import java.time.Duration;
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 
 public class SpeedResult {
 	private Long id;

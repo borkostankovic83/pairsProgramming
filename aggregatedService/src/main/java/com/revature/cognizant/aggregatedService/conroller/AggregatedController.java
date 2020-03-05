@@ -14,6 +14,7 @@ import com.revature.cognizant.aggregatedService.model.SpeedResult;
 @RestController
 @RequestMapping(value = "/api/experiment")
 public class AggregatedController {
+	
 	@Autowired
 	private SpeedResult speedResult;
 	
