@@ -15,28 +15,33 @@ public class SpeedResultServiceJpa implements SpeedResultService {
 	private SpeedResultRepo speedResultRepo;
 
 	@Override
-	public SpeedResult getDistance(Long id) {
+	public SpeedResult getSpeedResult(Long id) {
 		return speedResultRepo.findById(id).get();
 	}
 
 	@Override
-	public Set<SpeedResult> getDistances() {
+	public Set<SpeedResult> getSpeedResults() {
 		return new HashSet<SpeedResult>(speedResultRepo.findAll());
 	}
 
 	@Override
-	public void deleteDistance(SpeedResult speedResult) {
+	public void deleteSpeedResult(SpeedResult speedResult) {
 		speedResultRepo.delete(speedResult);
 	}
 
 	@Override
-	public void updateDistance(SpeedResult speedResult) {
-		speedResultRepo.save(speedResult);
+	public SpeedResult updateSpeedResult(SpeedResult speedResult) {
+		return speedResultRepo.save(speedResult);
 	}
 
 	@Override
-	public void newCustomer(SpeedResult speedResult) {
-		speedResultRepo.save(speedResult);
+	public SpeedResult newSpeedResult(SpeedResult speedResult) {
+		return speedResultRepo.save(speedResult);
+	}
+
+	@Override
+	public Set<SpeedResult> getSpeedResultsBySubjectName(String subjectName) {
+		return speedResultRepo.getSpeedResultsBySubjectName(subjectName);
 	}
 
 }
