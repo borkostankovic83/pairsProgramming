@@ -2,7 +2,7 @@
 ## Build and run project
 At base project directory, run the following command at command prompt
 ```
-./gradlew cleean build bootRun
+./gradlew clean build bootRun
 ```
 ##URL for distance unit conversion
 
