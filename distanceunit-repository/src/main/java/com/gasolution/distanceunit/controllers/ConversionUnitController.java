@@ -7,8 +7,6 @@ import com.gasolution.distanceunit.models.DistanceUnit;
 import com.gasolution.distanceunit.models.DistanceUnitConversion;
 import com.gasolution.distanceunit.repository.ConversionUnitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
