@@ -1,6 +1,7 @@
 package com.revature.cognizant.database.controller;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class DatabaseController {
 	}
 	
 	@GetMapping("{subjectName}")
-	public ResponseEntity<Set<SpeedResult>> getSpeedResult(@RequestParam("subjectName") String subjectName) {
+	public ResponseEntity<List<SpeedResult>> getSpeedResult(@RequestParam("subjectName") String subjectName) {
 		return ResponseEntity.ok().body(speedResultService.getSpeedResultsBySubjectName(subjectName));
 	}
 }

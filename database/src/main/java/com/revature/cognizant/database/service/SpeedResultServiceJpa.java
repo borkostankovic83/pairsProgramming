@@ -1,6 +1,7 @@
 package com.revature.cognizant.database.service;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,8 @@ public class SpeedResultServiceJpa implements SpeedResultService {
 	}
 
 	@Override
-	public Set<SpeedResult> getSpeedResults() {
-		return new HashSet<SpeedResult>(speedResultRepo.findAll());
+	public List<SpeedResult> getSpeedResults() {
+		return speedResultRepo.findAll();
 	}
 
 	@Override
@@ -40,7 +41,7 @@ public class SpeedResultServiceJpa implements SpeedResultService {
 	}
 
 	@Override
-	public Set<SpeedResult> getSpeedResultsBySubjectName(String subjectName) {
+	public List<SpeedResult> getSpeedResultsBySubjectName(String subjectName) {
 		return speedResultRepo.getSpeedResultsBySubjectName(subjectName);
 	}
 
