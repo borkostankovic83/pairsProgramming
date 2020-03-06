@@ -17,8 +17,8 @@ class AggregatedServiceApplicationTests {
 	@Test
 	void postRequestBody() {
 		AggregatedController ac = new AggregatedController();
-		SpeedResult sr = new SpeedResult(0, "Drop tennis ball", );
-		sr.
+		SpeedResult sr = new SpeedResult();
+		sr.setSpeed(null);
 		ObjectMapper om = new ObjectMapper();
 		String test = om.writeValueAsString(value);
 		String result = ac.postExperiment(test);
