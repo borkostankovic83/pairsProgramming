@@ -8,5 +8,6 @@ public interface AppcatFeign {
 	
 	@GetMapping("/cats")
 	public String getCats();
+	public String getAllCats();
 
 }
